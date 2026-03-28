@@ -18,7 +18,7 @@ public class Call_Manager : MonoBehaviour
     [Header("Day Data")]
     [SerializeField] private Day_Scriptable[] days;
     [SerializeField] private int currentDayIndex;
-     public int current_day_counter = 1;
+    public int current_day_counter = 1;
 
     [Header("All Archives")]
     [SerializeField] private Archive_Scriptable[] allArchives;
@@ -37,8 +37,15 @@ public class Call_Manager : MonoBehaviour
 
     [Header("Shift Ended Panel")]
     [SerializeField] private GameObject shiftEndedPanel;
+    [SerializeField] private TMP_Text shiftEndTitleText;
     [SerializeField] private TMP_Text accuracyText;
     [SerializeField] private TMP_Text salaryText;
+    [SerializeField] private TMP_Text goalText;
+
+    [Header("Goal Settings")]
+    [SerializeField] private int salaryGoal = 100;
+    [SerializeField] private string goalReachText = "Summary Report";
+    [SerializeField] private string goalFailText = "Game Over";
 
     private Day_Scriptable currentDay;
     private int currentCallerIndex = 0;
@@ -53,6 +60,7 @@ public class Call_Manager : MonoBehaviour
     private int dayWrongAnswers = 0;
 
     private bool daySalaryGranted = false;
+    private bool didReachGoalThisShift = false;
 
     public int CurrentDayNumber
     {
@@ -100,6 +108,7 @@ public class Call_Manager : MonoBehaviour
         dayCorrectAnswers = 0;
         dayWrongAnswers = 0;
         daySalaryGranted = false;
+        didReachGoalThisShift = false;
 
         if (submitPanel != null)
             submitPanel.SetActive(false);
@@ -286,10 +295,11 @@ public class Call_Manager : MonoBehaviour
     private void OpenShiftEndedPanel()
     {
         int salary = GetDaySalary();
+        didReachGoalThisShift = salary >= salaryGoal;
 
         UpdateShiftEndedUI();
 
-        if (!daySalaryGranted)
+        if (didReachGoalThisShift && !daySalaryGranted)
         {
             GrantDaySalary(salary);
             daySalaryGranted = true;
@@ -312,11 +322,18 @@ public class Call_Manager : MonoBehaviour
         int roundedAccuracy = Mathf.RoundToInt(accuracy);
         int salary = GetDaySalary();
 
+        if (shiftEndTitleText != null)
+            shiftEndTitleText.text = didReachGoalThisShift ? goalReachText : goalFailText;
+
         if (accuracyText != null)
             accuracyText.text = "Accuracy: " + roundedAccuracy + "%";
 
         if (salaryText != null)
             salaryText.text = "Salary: $" + salary;
+
+        if (goalText != null)
+            goalText.text = "Goal: $" + salaryGoal;
+
     }
 
     private int GetDaySalary()
@@ -332,29 +349,44 @@ public class Call_Manager : MonoBehaviour
         Profile_Manager.Instance.AddMoney(moneyGained);
     }
 
-    public void NextDay()
+    public void Next()
     {
-        int nextDayIndex = currentDayIndex + 1;
-
         if (shiftEndedPanel != null)
             shiftEndedPanel.SetActive(false);
 
+        if (didReachGoalThisShift)
+        {
+            ProceedToNextDay();
+        }
+        else
+        {
+            QuitGame();
+        }
+    }
+
+    private void ProceedToNextDay()
+    {
+        int nextDayIndex = currentDayIndex + 1;
+
         if (days == null || nextDayIndex >= days.Length)
         {
-            Debug.Log("No more days.");
+            QuitGame();
             return;
         }
 
         LoadDay(nextDayIndex);
-
-        if (mailManager != null)
-            mailManager.RefreshMailsForCurrentDay();
-
-        if (archiveManager != null)
-            archiveManager.RefreshArchivesForCurrentDay();
-
-        current_day_counter++;
         CloseReportPanel();
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Game is closing...");
+
+        Application.Quit();
+
+    #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+    #endif
     }
 
     public bool IsArchiveUnlocked(Archive_Scriptable archiveData)
