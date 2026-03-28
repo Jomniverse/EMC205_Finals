@@ -143,18 +143,28 @@ public class Archive_Manager : MonoBehaviour
         if (textField == null) return;
 
         textField.textWrappingMode = TextWrappingModes.Normal;
-        textField.ForceMeshUpdate();
+        textField.overflowMode = TextOverflowModes.Overflow;
 
-        float preferredHeight = textField.preferredHeight + extraHeightPadding;
+        RectTransform rect = textField.rectTransform;
+
+        float width = rect.rect.width;
+        if (width <= 0f)
+            width = rect.sizeDelta.x;
+
+        Vector2 preferredSize = textField.GetPreferredValues(textField.text, width, 0f);
+        float preferredHeight = preferredSize.y + extraHeightPadding;
 
         LayoutElement layoutElement = textField.GetComponent<LayoutElement>();
         if (layoutElement == null)
             layoutElement = textField.gameObject.AddComponent<LayoutElement>();
 
+        layoutElement.minHeight = preferredHeight;
         layoutElement.preferredHeight = preferredHeight;
+        layoutElement.flexibleHeight = 0f;
 
-        RectTransform rect = textField.rectTransform;
         rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, preferredHeight);
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
     }
 
     private void ResizeImageToWidth(Image targetImage, float targetWidth)
@@ -176,8 +186,15 @@ public class Archive_Manager : MonoBehaviour
     private IEnumerator RefreshLayoutAndResetScroll()
     {
         yield return null;
+        yield return null;
 
         Canvas.ForceUpdateCanvases();
+
+        ResizeTextField(archive_entry_name);
+        ResizeTextField(archive_description);
+        ResizeTextField(archive_Risk);
+        ResizeTextField(archive_Risk_Bullets);
+        ResizeTextField(archive_Solution);
 
         if (content_holder != null)
             LayoutRebuilder.ForceRebuildLayoutImmediate(content_holder);
