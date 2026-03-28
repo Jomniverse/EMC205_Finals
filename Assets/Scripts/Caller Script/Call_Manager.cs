@@ -27,6 +27,12 @@ public class Call_Manager : MonoBehaviour
     [SerializeField] private TMP_Text callerNameText;
     [SerializeField] private TMP_Text callerDialogueText;
     [SerializeField] private Button submitReportButton;
+    [SerializeField] private Button zoomButton;
+
+    [Header("Zoomed Call Window UI")]
+    [SerializeField] private GameObject zoomPanel;
+    [SerializeField] private TMP_Text callerNameText_zoomed;
+    [SerializeField] private TMP_Text callerDialogueText_zoomed;
 
     [Header("Submit Panel UI")]
     [SerializeField] private GameObject submitPanel;
@@ -175,6 +181,13 @@ public class Call_Manager : MonoBehaviour
 
         if (submitReportButton != null)
             submitReportButton.interactable = true;
+
+        if (callerNameText_zoomed != null)
+            callerNameText_zoomed.text = callerNameText.text;
+
+        if (callerDialogueText_zoomed != null)
+            callerDialogueText_zoomed.text = callerDialogueText.text;
+
     }
 
     private void ClearCallWindow()
@@ -199,6 +212,12 @@ public class Call_Manager : MonoBehaviour
 
         PopulateDropdown();
         submitPanel.SetActive(true);
+    }
+
+    public void OpenZoomed()
+    {
+        if (zoomPanel != null)
+            zoomPanel.SetActive(true);
     }
 
     public void CloseSubmitPanel()
