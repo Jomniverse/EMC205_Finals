@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08295ed304ff2404a9b21629facf9a20, type: 3}
+  m_Name: Mail_2
+  m_EditorClassIdentifier: 
+  sender: Susan
+  subject: Overdue Payment
+  message: 'Hey, it''s your landlord. I know times are tough, and I''ve already turned
+    a blind eye to your last overdue payment. I let that one slide mostly because
+    of your sick sister, but I really can''t tolerate this much longer. I need $300
+    by today.
+
+    
+
+    Much love,
+
+    Susan
+
+'

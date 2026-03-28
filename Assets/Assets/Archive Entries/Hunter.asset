@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f6e2fe7f8ea8d4fb8c32ff1f5b9b9a, type: 3}
+  m_Name: Hunter
+  m_EditorClassIdentifier: 
+  archive_name: Hunter
+  archive_image: {fileID: 21300000, guid: 4052a4ae52fdec74fa773678347302fe, type: 3}
+  description: A crude imitation of a person, with elongated arms and legs alongside
+    sunken eyes and sharp teeth, Incredible speed and bite force, highly intelligent.
+    Prefers to stalk victims for long periods of time before attacking takes the
+    appearance of said victim.
+  risk: 'Risk Level: High'
+  risk_bullets: '\u2022 Has a high destructive force
+
+    \u2022 Will eat any leaving
+    creature
+
+    \u2022 Able to Identify Hiding Place
+
+    \u2022 Invulnerable skin
+    almost impossible to kill
+
+'
+  solution: Keep Quiet and Hide, wait for authorities to come quickly.
+  unlockDay: 2

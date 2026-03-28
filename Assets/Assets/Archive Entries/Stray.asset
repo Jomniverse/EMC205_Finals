@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f6e2fe7f8ea8d4fb8c32ff1f5b9b9a, type: 3}
+  m_Name: Stray
+  m_EditorClassIdentifier: 
+  archive_name: Stray
+  archive_image: {fileID: 21300000, guid: 0ea4dbdfb96cdad46a646eab95da9e56, type: 3}
+  islocked: 0
+  description: 'Able to mimic any animal albeit with some deformities, common deformities
+    are red eyes, exposed flesh, cold sores, and disfigured limbs. Often mimics Household
+    pets and Livestock, but able to also take the form of wild animals.
+
+'
+  risk: Risk Level:Mid
+  risk_bullets: '\u2022 Takes the form of any animal
+
+    \u2022 Most often pets
+    (cats, dogs, and livestock)
+
+    \u2022 Will only eat the creature it mimics
+
+'
+  solution: Immediately Evacuate and Fortify once you realise the creature is following
+    you (preferably an elevated surface if it's a land animal). Quiet your pet and
+    wait for it to leave. Otherwise wait for the task force to arrive to dispose
+    of the creature.

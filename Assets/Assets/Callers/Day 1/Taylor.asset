@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665fc8c0edf5a3d40aacb46d8ba127c8, type: 3}
+  m_Name: Taylor
+  m_EditorClassIdentifier: 
+  caller_name: Taylor
+  caller_dialogue: "Hello, my neighbor told me to call this number. There's this
+    weird ball of red thing in my garden\u2014my kids nearly touched it while I was
+    out at work. Thank goodness I got home when I did. It keeps wriggling and it's
+    spooking my kids out. It keeps spewing some kind of cloud, too"
+  correct_answer: {fileID: 11400000, guid: fedbcb7aeb56c9a4a848a796627a9cd5, type: 2}

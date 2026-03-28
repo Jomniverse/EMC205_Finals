@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f6e2fe7f8ea8d4fb8c32ff1f5b9b9a, type: 3}
+  m_Name: Hive
+  m_EditorClassIdentifier: 
+  archive_name: Hive
+  archive_image: {fileID: 21300000, guid: e876d61ad779e7e4daeef6c79f11fd41, type: 3}
+  description: A near perfect mimicry of a human except for some strange behavioral
+    habits(hordes certain objects, eating strange objects and so on), does not make
+    eye contact, and struggles with showing and understanding human emotions.
+  risk: 'Risk Level: Unknown'
+  risk_bullets: '\u2022 Generally harmless
+
+    \u2022 Can mimic the person''s behavior
+    and looks perfectly
+
+    \u2022 Has strange behavioral actions
+
+    \u2022 Lack
+    of human emotions and expression
+
+'
+  solution: Interact with them normally but limit contact. Do not go near their house
+    nor should you accept their invitation. Be polite and just call the nearest I.E.R.F.
+    to handle the situation. They will send you a date and before that date you must
+    move.
+  unlockDay: 2

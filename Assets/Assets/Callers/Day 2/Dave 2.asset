@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665fc8c0edf5a3d40aacb46d8ba127c8, type: 3}
+  m_Name: Dave 2
+  m_EditorClassIdentifier: 
+  caller_name: Dave
+  caller_dialogue: "Hey so It\u2019s me again Dave I\u2019m just calling because
+    my kids said there was a dog outside that looks like our dog Roland, I\u2019ve
+    never seen it but my wife said she can hear them outside howling and she\u2019s
+    worried."
+  correct_answer: {fileID: 11400000, guid: 2fe250577faf0cb4fba08be0a7ddcefe, type: 2}

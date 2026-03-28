@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665fc8c0edf5a3d40aacb46d8ba127c8, type: 3}
+  m_Name: Dave
+  m_EditorClassIdentifier: 
+  caller_name: Dave
+  caller_dialogue: Hey, so just a week ago my neighbor was all fine and dandy, but
+    recently he just won't stop hoarding bugs in his house. It would be fine if those
+    creeps didn't crawl over to our place and give my kids lives like hell. He used
+    to be so talkative, but now all he does is stare with those creepy eyes. I tried
+    making a joke with him and he just stared at me.
+  correct_answer: {fileID: 11400000, guid: b3b0296cf2e5e094f8e46854a04182a5, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665fc8c0edf5a3d40aacb46d8ba127c8, type: 3}
+  m_Name: June
+  m_EditorClassIdentifier: 
+  caller_name: June
+  caller_dialogue: I don't know what's happening, but I was just walking my dog and
+    I can feel something following us. At first I thought I was crazy, but there
+    really was an extra set of steps following us. It might be an entity or something.
+    I need help right now, please.
+  correct_answer: {fileID: 11400000, guid: 2fe250577faf0cb4fba08be0a7ddcefe, type: 2}

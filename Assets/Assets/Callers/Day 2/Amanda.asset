@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665fc8c0edf5a3d40aacb46d8ba127c8, type: 3}
+  m_Name: Amanda
+  m_EditorClassIdentifier: 
+  caller_name: Amanda
+  caller_dialogue: "HELP\u2026 please!!! Uh\u2026huh\u2026uh\u2026argh Somethings
+    chasing me I barely managed to hide\u2014omg am I going to die, and uh it was
+    big super big, it can open doors I think it ate my dog I don\u2019t know what\u2019s
+    happening please hurry"
+  correct_answer: {fileID: 11400000, guid: 3ccbaad8e7aeb084188ff4b63d78105c, type: 2}

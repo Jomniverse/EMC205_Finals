@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e283aa0bd25832e438a325340ff13a8d, type: 3}
+  m_Name: Shop
+  m_EditorClassIdentifier: 
+  software_name: I.E.R.F Marketplace
+  software_description: full of junk right now
+  software_icon: {fileID: 21300000, guid: 4fc537e8062df4b4ebd7e9c33aa08730, type: 3}
